@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  final _emojis = '☺️ 🍕 🫥 🫠 👩‍🍳 ✈️ 0️⃣ 1️⃣ 2️⃣ 3️⃣';
+  final _emojis = '🇫 🇱 🇺 🇹 🇹 🇪 🇷 📱 💙 🚀 🫨';
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('Twemoji'),
+          title: const Text('flutter_twemoji'),
         ),
         body: Center(
           child: Column(
@@ -81,8 +81,10 @@ class _MyHomePageState extends State<MyHomePage>
                 ),
               ),
               const TwemojiText(
-                text: '🫵👩‍💻👨‍💻 :auto format',
-                emojiFontMultiplier: 2,
+                text: 'This is some text 💬 with Twemoji! 🚀',
+              ),
+              const TwemojiText(
+                text: 'Even with support for Fitzpatrick modifiers! 👩👨🏿‍👩🏼‍',
               ),
               const SizedBox(height: 20),
               AnimatedBuilder(
