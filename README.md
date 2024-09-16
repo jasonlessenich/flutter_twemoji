@@ -33,12 +33,24 @@ Combine the **TwemojiTextSpan** with **RichText** to create rich text content wi
 
 ```dart
 RichText(
-  text: TwemojiTextSpan(
-  text: 'Text 🍕🍔🌭🍿🧂🥓🥨🥐🍞🥞🥞',
-  style: Theme.of(context).textTheme.headline6,
+    text: TwemojiTextSpan(
+    text: 'Text 🍕🍔🌭🍿🧂🥓🥨🥐🍞🥞🥞',
+    style: Theme.of(context).textTheme.headline6,
   ),
 )
 ```
+
+### Only include specific emojis
+By default, the package includes _all_ twemojis.
+To reduce the overall bundle size, you can specify which emojis to include in your pubspec.yaml:
+
+```yaml
+flutter_twemoji:
+  includes: '🍕🍔🌭🍿🧂🥓🥨🥐🍞🥞🥞'
+```
+
+Then call `dart run flutter_twemoji:include_emojis` to have it filter down the list of emojis
+to generate assets for.
 
 ## Credits
 - Originally maintained by [hadi-codes](https://github.com/hadi-codes/twemoji)
